@@ -22,20 +22,25 @@ class AClass {
         var aLocalVariable = "local variable"
         
         //Step 1. Try to print aLocalVariable Here - Possible
-        //print("\(aLocalVariable) printed from methodA in AClass")
+        print("\(aLocalVariable) printed from methodA in AClass")
         
         //Step 3. Try to print aPrivateProperty Here
+        print("\(aPrivateProperty)")
         
         //Step 6. Try to print aFilePrivateProperty Here
+        print("\(aFilePrivateProperty)")
         
         //Step 9. Try to print anInternalProperty Here
+        print("\(anInternalProperty)")
     }
     
     func methodB () {
         
         //Step 2. Try to print aLocalVariable Here
+        print("\(aLocalVariable)")
         
         //Step 4. Try to print aPrivateProperty Here
+        print("\(aPrivateProperty)")
     }
     
 }
@@ -45,8 +50,9 @@ class AnotherClassInTheSameFile {
     init() {
         
         //Step 5. Try to print aPrivateProperty Here
+        print("\(aPrivateProperty)")
         
         //Step 7. Try to print aFilePrivateProperty Here
-        
+        print("\(AClass.methodA)")
     }
 }
